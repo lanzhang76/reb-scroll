@@ -1,19 +1,19 @@
 /* CSS files add styling rules to your content */
-*{
+* {
   box-sizing: border-box;
 }
 
-h2{
-  margin:0px;
+h2 {
+  margin: 0px;
 }
 
 h1 {
-  font-size:40px;
+  font-size: 40px;
   color: #563189;
 }
 
 body {
-  font-family: 'Heebo', sans-serif;
+  font-family: "Heebo", sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -22,22 +22,22 @@ img {
   width: 100%;
 }
 
-.bold{
-  font-weight:600;
+.bold {
+  font-weight: 600;
 }
 
-.modal-header{
-  font-size:18px
+.modal-header {
+  font-size: 18px;
 }
 
-.modal-body{
-  font-weight:600;
-  font-size:14px;
+.modal-body {
+  font-weight: 600;
+  font-size: 14px;
 }
 
-.modal-button-text{
-  font-weight:400;
-  font-size:13px;
+.modal-button-text {
+  font-weight: 400;
+  font-size: 13px;
 }
 
 .main {
@@ -54,7 +54,7 @@ img {
 }
 
 .header {
-  position:fixed;
+  position: fixed;
   box-sizing: border-box;
   padding: 20px 20px 0 20px;
 }
@@ -70,96 +70,125 @@ img {
   bottom: 0;
 }
 
-.modals{
-  display:flex;
-  justify-content:space-around;
-  z-index:3;
+.modals {
+  display: flex;
+  justify-content: space-around;
+  z-index: 3;
 }
 
-.modals-section{
-  width:300px;
-  padding:25px;
-  border-radius:10px;
-  background:white;
-  display:flex;
+.modals-section {
+  width: 300px;
+  padding: 25px;
+  border-radius: 10px;
+  background: white;
+  opacity:0.8;
+  display: flex;
   flex-direction: column;
 }
 
-.modals-section:hover{
-  box-shadow: 0 10px rgba(255,255,255,0.3);
+.modals-section:hover {
+  box-shadow: 0 10px rgba(255, 255, 255, 0.3);
 }
 
-.modals-button-section-wrapper{
-  display:flex;
-  align-items:center;
-  justify-content:center;
+.modals-button-section-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.modals-button-section{
-  width:165px;
-  padding:10px;
-  border-radius:25px;
-  background:red;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:white;
+.modals-button-section {
+  width: 165px;
+  padding: 10px;
+  border-radius: 25px;
+  background: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
 }
 
-.modals-button-section img{
-  margin-left:10px;
-  width:8px;
-  height:6px;
-  
+.modals-button-section img {
+  margin-left: 10px;
+  width: 8px;
+  height: 6px;
 }
 
-#modals-button-section1{
+#modals-button-section1 {
   background: linear-gradient(#EB36C0, #D3198C);
 }
-#modals-button-section2{
+#modals-button-section2 {
   background: linear-gradient(#31CADB, #169AB4);
 }
-#modals-button-section3{
+#modals-button-section3 {
   background: linear-gradient(#8F5FBE, #563189);
 }
 
-
 /* CONTENT MIDDLE */
 
-.content{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  margin:130px 0;
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 130px 0;
 }
 
-.content-text{
-  width:500px;
+.content-text {
+  width: 500px;
 }
 
-#apple-placeholder{
-  width:235px;
-  height:200px;
-  margin-left:140px;
+#apple-placeholder {
+  width: 235px;
+  height: 200px;
+  margin-left: 140px;
   margin-right: 100px;
-  position:relative;
+  position: relative;
 }
 
-#apple{
-  top:-30px;
-  position:absolute;
+#apple {
+  top: -30px;
+  position: absolute;
 }
 
-#apple img{
-  width:235px;
+#apple img {
+  width: 235px;
 }
 
 /*  ANIMATE COMPONENTS*/
 
-.animate-components{
-  position:absolute;
-  height:700px;
-  width:100%;
-  top:0;
-  background: rgba(0,0,0,0.1);
+.animate-components {
+  position: absolute;
+  height: 700px;
+  width: 100%;
+  top: 0;
+  z-index: -1;
+  background: rgba(0, 0, 0, 0.1);
 }
+
+.animate-leaf {
+  position: absolute;
+}
+
+#animate-leaf-top {
+  width: 97px;
+  left: 30%;
+}
+
+#animate-leaf-left {
+  width: 70px;
+  left: 10%;
+  top:212px;
+}
+
+#animate-leaf-right {
+  width: 100px;
+  right:-20px;
+  top:130px;
+}
+
+#animate-leaf-bottom {
+  width: 97px;
+  left:22%;
+  top:560px;
+}
+
+
