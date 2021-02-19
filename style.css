@@ -160,7 +160,13 @@ img {
   position: absolute;
 }
 
+#apple img:hover{
+  transition: all 1s ease-out;
+  transform:scale(1.05,1.05);
+}
+
 #apple img {
+  transition: all 1s ease-out;
   width: 235px;
 }
 
@@ -176,7 +182,8 @@ img {
 }
 
 .animate-leaf,
-.animate-flower{
+.animate-flower,
+.animate-bud{
   position: absolute;
 }
 
@@ -217,6 +224,12 @@ img {
 
 #animate-flower-bot{
   width:124px;
+  left:-10px;
+  top:65%;
+}
+
+#animate-bud-bot{
+  width:49px;
   left:-10px;
   top:65%;
 }

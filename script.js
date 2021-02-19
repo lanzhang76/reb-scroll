@@ -60,7 +60,8 @@ function animate() {
     gsap.to(".animate-leaf", { y: apple_yDiff, x: apple_xDiff });
     
     // flowers
-    gsap.to("#animate-flower-mid",{rotate:"+="+apple_xDiff*0.5});
+    gsap.to("#animate-flower-mid",{rotate:"+="+apple_xDiff*0.3});
+     gsap.to("#animate-flower-bot",{rotate:"+="+apple_yDiff*0.8});
   
   });
 }
