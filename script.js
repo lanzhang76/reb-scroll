@@ -2,7 +2,7 @@ let initiate = true;
 
 function initAnimation() {
   // initation
-  gsap.fromTo(".bg", { duration: 3, scale: 1.5 }, { scale: 1.2 });
+  gsap.fromTo(".bg", { duration: 5, scale: 2.2 }, { scale: 1.3 });
   gsap.from("#apple", { duration: 4, scale: 0.95 });
   gsap.from(".animate-leaf", {
     duration: 2,
@@ -11,6 +11,13 @@ function initAnimation() {
     x: 0,
     y: "-=3",
     transformOrigin: "50% top"
+  });
+  gsap.from(".animate-flower", {
+    duration: 5,
+    scale: 0.8,
+    opacity: 0.8,
+    rotate:"-=25",
+    transformOrigin: "50% 50%"
   });
   const leaftl = gsap
     .timeline()
@@ -24,6 +31,7 @@ function initAnimation() {
     .to(["#animate-leaf-left"], { duration: 2, x: 0, y: 0 })
     .to(["#animate-leaf-right"], { duration: 2, x: "-=10", y: "-=5" }, "-=1")
   .to(["#animate-leaf-top"], { duration: 2, rotate:"+=3" }, "-=2");
+  
   initiate = false;
 }
 
@@ -50,6 +58,10 @@ function animate() {
     var apple_xDiff = map(xDiff, -600, 600, 5, -5);
     var apple_yDiff = map(yDiff, -800, 800, 2, -2);
     gsap.to(".animate-leaf", { y: apple_yDiff, x: apple_xDiff });
+    
+    // flowers
+    gsap.to("#animate-flower-mid",{rotate:"+="+apple_xDiff*0.5});
+  
   });
 }
 

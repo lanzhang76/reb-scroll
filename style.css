@@ -175,7 +175,8 @@ img {
   z-index: -1;
 }
 
-.animate-leaf {
+.animate-leaf,
+.animate-flower{
   position: absolute;
 }
 
@@ -202,4 +203,20 @@ img {
   top:560px;
 }
 
+#animate-flower-mid{
+  width:92px;
+  left:40%;
+  top:55%;
+}
 
+#animate-flower-left{
+  width:77px;
+  left:-10px;
+  top:35%;
+}
+
+#animate-flower-bot{
+  width:124px;
+  left:-10px;
+  top:65%;
+}
