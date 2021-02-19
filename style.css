@@ -54,6 +54,7 @@ img {
 }
 
 .header {
+  position:fixed;
   box-sizing: border-box;
   padding: 20px 20px 0 20px;
 }
@@ -128,14 +129,23 @@ img {
   display:flex;
   align-items:center;
   justify-content:center;
+  margin:130px 0;
 }
 
 .content-text{
-  width:500px
+  width:500px;
+}
+
+#apple-placeholder{
+  width:235px;
+  height:200px;
+  margin-left:140px;
+  margin-right: 100px;
+  position:relative;
 }
 
 #apple{
-  margin-right:100px;
+  top:-30px;
   position:absolute;
 }
 
