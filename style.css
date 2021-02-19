@@ -17,7 +17,7 @@ h2{
 }
 
 .modal-button-text{
-  font-weight:600;
+  font-weight:400;
   font-size:13px;
 }
 
@@ -108,5 +108,11 @@ img {
 }
 
 #modals-button-section1{
+  background: linear-gradient(#EB36C0, #D3198C);
+}
+#modals-button-section2{
   background: linear-gradient(#31CADB, #169AB4);
+}
+#modals-button-section3{
+  background: linear-gradient(#8F5FBE, #563189);
 }
