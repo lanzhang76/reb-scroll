@@ -1,9 +1,9 @@
 
 
 // initation
-gsap.fromTo(".bg", { duration: 3, scale: 1.5 }, { scale: 1.1 });
-gsap.from("#apple", { duration: 2, scale: 0.95 });
-gsap.from(".animate-leaf", { duration: 0.5, scale: 0.5, opacity: 0.3, x: "-=10" ,y:"-=3" });
+gsap.fromTo(".bg", { duration: 3, scale: 1.5 }, { scale: 1.2 });
+gsap.from("#apple", { duration: 4, scale: 0.95 });
+gsap.from(".animate-leaf", { duration: 2, scale: 0.5, opacity: 0.3, x:0,y:"-=3",transformOrigin:"50% top" });
 const leaftl = gsap
   .timeline()
   .to(["#animate-leaf-bottom",], { duration: 2, x: "+=15" ,y:"+=15", },"-=0.5")
