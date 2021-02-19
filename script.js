@@ -1,11 +1,15 @@
+
+
 // initation
 gsap.fromTo(".bg", { duration: 3, scale: 1.5 }, { scale: 1.1 });
 gsap.from("#apple", { duration: 2, scale: 0.95 });
+gsap.from(".animate-leaf", { duration: 0.5, scale: 0.5, opacity: 0.3, x: "-=10" ,y:"-=3" });
 const leaftl = gsap
   .timeline()
-  .from(".animate-leaf", { duration: 2, scale: 0.5, opacity: 0, x: -10 })
-  .to(".animate-leaf", { duration: 2, scale: 1,x: 10, y: 2 })
-  .to(".animate-leaf", { duration: 4, x: -10, y: 0 }, "-=4");
+  .to(["#animate-leaf-bottom",], { duration: 2, x: "+=15" ,y:"+=15", },"-=0.5")
+  .to(["#animate-leaf-left"], { duration: 2, x: "-=5" ,y:"+=05"},"-=0.5")
+.to(["#animate-leaf-left"], { duration: 2, x: 0 ,y:0})
+
 
 // mouse-based movements //
 var centerX = window.innerWidth / 2;
@@ -24,4 +28,9 @@ $("body").mousemove(function(e) {
   var apple_xDiff = map(xDiff, -600, 600, 3, -3);
   var apple_yDiff = map(yDiff, -800, 800, 3, -3);
   gsap.to("#apple", { y: apple_xDiff, x: apple_yDiff });
+  
+  // leaves movement
+  var apple_xDiff = map(xDiff, -600, 600, 5, -5);
+  var apple_yDiff = map(yDiff, -800, 800, 5, -5);
+  gsap.to(".animate-leaf", { y: apple_yDiff, x: apple_xDiff });
 });

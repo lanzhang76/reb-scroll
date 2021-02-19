@@ -157,11 +157,11 @@ img {
 
 .animate-components {
   position: absolute;
+  overflow: hidden;
   height: 700px;
   width: 100%;
   top: 0;
   z-index: -1;
-  background: rgba(0, 0, 0, 0.1);
 }
 
 .animate-leaf {
