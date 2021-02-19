@@ -2,10 +2,26 @@
 
 body {
   font-family: helvetica, arial, sans-serif;
-  margin: 2em;
+  margin:;
+  padding:0;
+  box-sizing:border-box;
 }
 
 h1 {
   font-style: italic;
   color: #373fff;
+}
+
+.main{
+  width:100vw;
+  height:100vh;
+  overflow:hidden
+}
+
+.main img{
+  width:100%;
+}
+
+.header{
+  padding:20px;
 }
