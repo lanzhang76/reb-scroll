@@ -1,4 +1,12 @@
 /* CSS files add styling rules to your content */
+*{
+  box-sizing: border-box;
+}
+
+h2{
+  margin:0px;
+}
+
 
 body {
   font-family: helvetica, arial, sans-serif;
@@ -16,8 +24,6 @@ img {
 }
 
 .main {
-  width: 100vw;
-  height: 100vh;
   overflow: hidden;
   box-sizing: border-box;
 }
@@ -46,14 +52,38 @@ img {
   bottom: 0;
 }
 
-
 .modals{
   display:flex;
-  display:none;
 }
 
 .modals-section{
+  width:300px;
+  padding:25px;
+  border-radius:10px;
   background:white;
   display:flex;
   flex-direction: column;
+}
+
+.modals-button-section-wrapper{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.modals-button-section{
+  width:165px;
+  padding:10px;
+  border-radius:25px;
+  background:red;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:white;
+}
+
+.modals-button-section img{
+  width:8px;
+  height:6px;
+  
 }
