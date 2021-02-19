@@ -230,6 +230,18 @@ img {
 
 #animate-bud-bot{
   width:49px;
-  left:-10px;
-  top:65%;
+  right:24%;
+  top:62%;
+}
+
+#animate-bud-right{
+  width:52px;
+  right:8%;
+  top:45%;
+}
+
+#animate-bud-top{
+  width:80px;
+  right:48%;
+  top:10%;
 }

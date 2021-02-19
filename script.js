@@ -19,6 +19,15 @@ function initAnimation() {
     rotate:"-=25",
     transformOrigin: "50% 50%"
   });
+   gsap.from(".animate-bud", {
+    duration: 5,
+    scale: 1.2,
+    opacity: 0.8,
+    rotate:"+=25",
+    transformOrigin: "50% 50%"
+  });
+  
+  
   const leaftl = gsap
     .timeline()
     .to(
