@@ -1,5 +1,11 @@
-/* If you're feeling fancy you can add interactivity 
-    to your site with Javascript */
+// bg animation
+gsap.from(".bg",{scale:1.2})
 
-// prints "hi" in the browser's dev tools console
-console.log("hi");
+var centerX = window.innerWidth / 2;
+var centerY= window.innerHeight / 2;
+
+$("body").mousemove(function(e) {
+    // console.log(e.pageX,e.pageY);
+  var xDiff = e.pageX-centerX;
+  var mapped_xDff = map(xDiff,-)
+})
