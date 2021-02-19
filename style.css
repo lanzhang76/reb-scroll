@@ -1,10 +1,9 @@
 /* CSS files add styling rules to your content */
 
-
 body {
   font-family: helvetica, arial, sans-serif;
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
@@ -12,35 +11,49 @@ h1 {
   color: #373fff;
 }
 
-img{
-  width:100%;
+img {
+  width: 100%;
 }
 
-.main{
-  width:100vw;
-  height:100vh;
-  overflow:hidden;
-  box-sizing:border-box;
+.main {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
-.bg{
-  position:absolute;
-  width:100%;
-  height:100%;
+.bg {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  width: 100%;
+  height: 100%;
 }
 
-.header{
-  box-sizing:border-box;
-  padding:20px;
+.header {
+  box-sizing: border-box;
+  padding: 20px;
 }
 
-.footer{
-  position:fixed;
-  width:100%;
-  bottom:0;
+.footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
 }
 
-.footer img{
-  position:absolute;
-  bottom:0;
+.footer img {
+  position: absolute;
+  bottom: 0;
+}
+
+
+.modals{
+  display:flex;
+  display:none;
+}
+
+.modals-section{
+  background:white;
+  display:flex;
+  flex-direction: column;
 }
