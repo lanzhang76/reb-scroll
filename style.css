@@ -7,6 +7,25 @@ h2{
   margin:0px;
 }
 
+h1 {
+  font-size:40px;
+  color: #563189;
+}
+
+body {
+  font-family: 'Heebo', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+}
+
+.bold{
+  font-weight:600;
+}
+
 .modal-header{
   font-size:18px
 }
@@ -19,21 +38,6 @@ h2{
 .modal-button-text{
   font-weight:400;
   font-size:13px;
-}
-
-body {
-  font-family: 'Heebo', sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-h1 {
-  font-style: italic;
-  color: #373fff;
-}
-
-img {
-  width: 100%;
 }
 
 .main {
@@ -51,7 +55,7 @@ img {
 
 .header {
   box-sizing: border-box;
-  padding: 20px;
+  padding: 20px 20px 0 20px;
 }
 
 .footer {
@@ -115,4 +119,26 @@ img {
 }
 #modals-button-section3{
   background: linear-gradient(#8F5FBE, #563189);
+}
+
+
+/* CONTENT MIDDLE */
+
+.content{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.content-text{
+  width:500px
+}
+
+#apple{
+  margin-right:100px;
+  position:absolute;
+}
+
+#apple img{
+  width:235px;
 }
