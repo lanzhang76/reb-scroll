@@ -16,11 +16,14 @@ function initAnimation() {
     .timeline()
     .to(
       ["#animate-leaf-bottom"],
-      { duration: 2, x: "+=15", y: "+=15" },
+      { duration: 2, x: "-=15", y: "+=15" },
       "-=0.5"
     )
-    .to(["#animate-leaf-left"], { duration: 2, x: "-=5", y: "+=05" }, "-=0.5")
-    .to(["#animate-leaf-left"], { duration: 2, x: 0, y: 0 });
+    .to(["#animate-leaf-bottom"], { duration: 2, x: 0, y: 0 })
+    .to(["#animate-leaf-left"], { duration: 2, x: "-=5", y: "+=5" }, "-=0.5")
+    .to(["#animate-leaf-left"], { duration: 2, x: 0, y: 0 })
+    .to(["#animate-leaf-right"], { duration: 2, x: "-=10", y: "-=5" }, "-=1")
+  .to(["#animate-leaf-top"], { duration: 2, rotate:"+=3" }, "-=2");
   initiate = false;
 }
 
@@ -33,7 +36,7 @@ function animate() {
     // console.log(e.pageX,e.pageY);
     var xDiff = e.pageX - centerX;
     var yDiff = e.pageY - centerY;
-    var mapped_xDiff = map(xDiff, -600, 600, 1.09, 1);
+    var mapped_xDiff = map(xDiff, -800, 800, 1.09, 1);
 
     // bg movement
     gsap.to(".bg", { scale: mapped_xDiff });
@@ -45,11 +48,10 @@ function animate() {
 
     // leaves movement
     var apple_xDiff = map(xDiff, -600, 600, 5, -5);
-    var apple_yDiff = map(yDiff, -800, 800, 5, -5);
+    var apple_yDiff = map(yDiff, -800, 800, 2, -2);
     gsap.to(".animate-leaf", { y: apple_yDiff, x: apple_xDiff });
   });
 }
 
-
 initAnimation();
-setTimeout(animate(),5000);
+setTimeout(animate(), 5000);

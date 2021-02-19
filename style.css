@@ -87,7 +87,7 @@ img {
 }
 
 .modals-section:hover {
-  box-shadow: 0 10px rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 0px 30px rgba(255, 255, 255, 1);
 }
 
 .modals-button-section-wrapper {
@@ -100,12 +100,12 @@ img {
   width: 165px;
   padding: 10px;
   border-radius: 25px;
-  background: red;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
 }
+
 
 .modals-button-section img {
   margin-left: 10px;
@@ -116,11 +116,22 @@ img {
 #modals-button-section1 {
   background: linear-gradient(#EB36C0, #D3198C);
 }
+#modals-button-section1:hover{
+  box-shadow: 0px 0px 10px #EB36C0;
+}
+
 #modals-button-section2 {
   background: linear-gradient(#31CADB, #169AB4);
 }
+#modals-button-section2:hover{
+  box-shadow: 0px 0px 10px #31CADB;
+}
+
 #modals-button-section3 {
   background: linear-gradient(#8F5FBE, #563189);
+}
+#modals-button-section3:hover{
+  box-shadow: 0px 0px 10px #8F5FBE;
 }
 
 /* CONTENT MIDDLE */
