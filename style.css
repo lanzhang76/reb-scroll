@@ -73,6 +73,7 @@ img {
 .modals{
   display:flex;
   justify-content:space-around;
+  z-index:3;
 }
 
 .modals-section{
