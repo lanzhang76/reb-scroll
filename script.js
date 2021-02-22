@@ -16,18 +16,17 @@ function initAnimation() {
     duration: 5,
     scale: 0.8,
     opacity: 0.8,
-    rotate:"-=25",
+    rotate: "-=25",
     transformOrigin: "50% 50%"
   });
-   gsap.from(".animate-bud", {
+  gsap.from(".animate-bud", {
     duration: 5,
     scale: 1.2,
     opacity: 0.8,
-    rotate:"+=25",
+    rotate: "+=25",
     transformOrigin: "50% 50%"
   });
-  
-  
+
   const leaftl = gsap
     .timeline()
     .to(
@@ -39,8 +38,8 @@ function initAnimation() {
     .to(["#animate-leaf-left"], { duration: 2, x: "-=5", y: "+=5" }, "-=0.5")
     .to(["#animate-leaf-left"], { duration: 2, x: 0, y: 0 })
     .to(["#animate-leaf-right"], { duration: 2, x: "-=10", y: "-=5" }, "-=1")
-  .to(["#animate-leaf-top"], { duration: 2, rotate:"+=3" }, "-=2");
-  
+    .to(["#animate-leaf-top"], { duration: 2, rotate: "+=3" }, "-=2");
+
   initiate = false;
 }
 
@@ -67,13 +66,19 @@ function animate() {
     var apple_xDiff = map(xDiff, -600, 600, 5, -5);
     var apple_yDiff = map(yDiff, -800, 800, 2, -2);
     gsap.to(".animate-leaf", { y: apple_yDiff, x: apple_xDiff });
-    
+
     // flowers
-    gsap.to("#animate-flower-mid",{rotate:"+="+apple_xDiff*0.3});
-     gsap.to("#animate-flower-bot",{rotate:"+="+apple_yDiff*0.8});
-  
+    gsap.to("#animate-flower-mid", { rotate: "+=" + apple_xDiff * 0.3 });
+    gsap.to("#animate-flower-bot", { rotate: "+=" + apple_yDiff * 0.8 });
   });
+
+  //button
 }
 
 initAnimation();
 setTimeout(animate(), 5000);
+
+let button2 = document.getElementById("modals-button-section2");
+button2.addEventListener("mouseover", function(event) {
+  console.log("hello");
+});

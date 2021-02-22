@@ -104,6 +104,12 @@ img {
   align-items: center;
   justify-content: center;
   color: white;
+  overflow:hidden;
+  position:relative;
+}
+
+.modals-button-section .button-label{
+  z-index:1;
 }
 
 
@@ -132,6 +138,16 @@ img {
 }
 #modals-button-section3:hover{
   box-shadow: 0px 0px 10px #8F5FBE;
+}
+
+.button-effect{
+  position:absolute;
+  width:0px;
+  border-radius:50%;
+  height:60px;
+  background:red;
+  margin-left:0px;
+  z-index:0;
 }
 
 /* CONTENT MIDDLE */
