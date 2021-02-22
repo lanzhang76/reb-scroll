@@ -89,7 +89,7 @@ button1.addEventListener("mouseleave", function(event) {
 });
 
 button2.addEventListener("mouseenter", function(event) {
-  gsap.to("#button-effect2",{duration:0.2,height:60,transformOrigin:"50% bottom"});
+  gsap.to("#button-effect2",{duration:0.2,height:90,transformOrigin:"50% bottom"});
 });
 
 button2.addEventListener("mouseleave", function(event) {
@@ -97,7 +97,8 @@ button2.addEventListener("mouseleave", function(event) {
 });
 
 button3.addEventListener("mouseenter", function(event) {
-  gsap.to("#button-effect3",{duration:0.2,height:60,transformOrigin:"50% bottom"});
+  gsap.to("#button-effect3",{duration:0.2,height:90,transformOrigin:"50% bottom"});
+  gsap.to("#caret3",{duration:1,scale:1.2})
 });
 
 button3.addEventListener("mouseleave", function(event) {
