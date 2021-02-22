@@ -59,6 +59,7 @@ img {
   background:white;
   box-sizing: border-box;
   padding: 10px 20px 10px 20px;
+  z-index:10;
 }
 
 .footer {
@@ -71,6 +72,12 @@ img {
   position: absolute;
   bottom: 0;
 }
+
+
+
+
+
+
 
 .modals {
   display: flex;
@@ -189,103 +196,16 @@ img {
   width: 500px;
   margin-left:5%;
   margin-top:10%;
+  position:relative;
 }
 
-#apple-placeholder {
-  width: 235px;
-  height: 200px;
-  margin-left: 140px;
-  margin-right: 100px;
-  position: relative;
+.branch{
+  z-index:0;
+  position:absolute;
+  top:0;
+  left:0;
 }
 
-#apple {
-  top: -30px;
-  position: absolute;
-}
-
-#apple img:hover{
-  transition: all 1s ease-out;
-  transform:scale(1.05,1.05);
-}
-
-#apple img {
-  transition: all 1s ease-out;
-  width: 235px;
-}
-
-/*  ANIMATE COMPONENTS*/
-
-.animate-components {
-  position: absolute;
-  overflow: hidden;
-  height: 700px;
-  width: 100%;
-  top: 0;
-  z-index: -1;
-}
-
-.animate-leaf,
-.animate-flower,
-.animate-bud{
-  position: absolute;
-}
-
-#animate-leaf-top {
-  width: 97px;
-  left: 30%;
-}
-
-#animate-leaf-left {
-  width: 70px;
-  left: 10%;
-  top:212px;
-}
-
-#animate-leaf-right {
-  width: 100px;
-  right:-20px;
-  top:130px;
-}
-
-#animate-leaf-bottom {
-  width: 97px;
-  left:22%;
-  top:560px;
-}
-
-#animate-flower-mid{
-  width:92px;
-  left:40%;
-  top:55%;
-}
-
-#animate-flower-left{
-  width:77px;
-  left:-10px;
-  top:35%;
-}
-
-#animate-flower-bot{
-  width:124px;
-  left:-10px;
-  top:65%;
-}
-
-#animate-bud-bot{
-  width:49px;
-  right:24%;
-  top:62%;
-}
-
-#animate-bud-right{
-  width:52px;
-  right:8%;
-  top:45%;
-}
-
-#animate-bud-top{
-  width:80px;
-  right:48%;
-  top:10%;
+.branch img{
+  width:100%;
 }
