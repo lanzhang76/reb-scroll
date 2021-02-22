@@ -136,21 +136,21 @@ img {
   background: linear-gradient(#EB36C0, #D3198C);
 }
 #modals-button-section1:hover{
-  box-shadow: 0px 0px 10px #EB36C0;
+  box-shadow: 0px 4px 10px  #EB36C0;
 }
 
 #modals-button-section2 {
   background: linear-gradient(#31CADB, #169AB4);
 }
 #modals-button-section2:hover{
-  box-shadow: 0px 0px 10px #31CADB;
+  box-shadow: 0px 4px 10px #31CADB;
 }
 
 #modals-button-section3 {
   background: linear-gradient(#8F5FBE, #563189);
 }
 #modals-button-section3:hover{
-  box-shadow: 0px 0px 10px #8F5FBE;
+  box-shadow: 0px 4px 10px #8F5FBE;
 }
 
 .button-effect{
