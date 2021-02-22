@@ -54,6 +54,7 @@ img {
 }
 
 .header {
+  width:100%;
   position: fixed;
   box-sizing: border-box;
   padding: 20px 20px 0 20px;
