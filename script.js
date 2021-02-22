@@ -85,7 +85,7 @@ let button3 = document.getElementById("modals-button-section3");
 
 const overlay = {in:{duration:0.2,height:90},out:{duration:0.2,height:0}};
 const buttonJump = {y:-2};
-const caretZoom = {in:{duration:1,x:4}, out:{duration:0.2,x:0}};
+const caretZoom = {in:{duration:1,x:4}, out:{duration:0.6,x:-4}};
 
 button1.addEventListener("mouseenter", function(event) {
   gsap.to(button1,buttonJump);
