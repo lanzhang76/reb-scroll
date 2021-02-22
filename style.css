@@ -56,8 +56,9 @@ img {
 .header {
   width:100%;
   position: fixed;
+  background:white;
   box-sizing: border-box;
-  padding: 20px 20px 0 20px;
+  padding: 10px 20px 10px 20px;
 }
 
 .footer {
@@ -180,12 +181,14 @@ img {
 .content {
   display: flex;
   align-items: center;
-  justify-content: center;
+/*   justify-content: center; */
   margin: 130px 0;
 }
 
 .content-text {
   width: 500px;
+  margin-left:5%;
+  margin-top:10%;
 }
 
 #apple-placeholder {
