@@ -82,25 +82,30 @@ let button2 = document.getElementById("modals-button-section2");
 let button3 = document.getElementById("modals-button-section3");
 button1.addEventListener("mouseenter", function(event) {
   gsap.to("#button-effect1",{duration:0.2,height:60,transformOrigin:"50% bottom"});
+  gsap.to("#caret2",{duration:1,x:4});
 });
 
 button1.addEventListener("mouseleave", function(event) {
   gsap.to("#button-effect1",{duration:0.2,height:0,transformOrigin:"0% 0%"});
+  gsap.to("#caret2",{duration:1,x:-4});
 });
 
 button2.addEventListener("mouseenter", function(event) {
   gsap.to("#button-effect2",{duration:0.2,height:90,transformOrigin:"50% bottom"});
+  gsap.to("#caret2",{duration:1,x:4});
 });
 
 button2.addEventListener("mouseleave", function(event) {
-  gsap.to("#button-effect2",{duration:0.2,height:0,transformOrigin:"0% 0%"});
+  gsap.to("#button-effect2",{duration:0.2,height:0});
+  gsap.to("#caret2",{duration:1,x:-4});
 });
 
 button3.addEventListener("mouseenter", function(event) {
-  gsap.to("#button-effect3",{duration:0.2,height:90,transformOrigin:"50% bottom"});
-  gsap.to("#caret3",{duration:1,scale:1.2})
+  gsap.to("#button-effect3",{duration:0.2,height:90});
+  gsap.to("#caret3",{duration:1,x:4});
 });
 
 button3.addEventListener("mouseleave", function(event) {
-  gsap.to("#button-effect3",{duration:0.2,height:0,transformOrigin:"0% 0%"});
+  gsap.to("#button-effect3",{duration:0.2,height:0});
+  gsap.to("#caret3",{duration:1,x:-4});
 });
