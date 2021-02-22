@@ -77,8 +77,29 @@ function animate() {
 
 initAnimation();
 setTimeout(animate(), 5000);
-
+let button1 = document.getElementById("modals-button-section1");
 let button2 = document.getElementById("modals-button-section2");
-button2.addEventListener("mouseover", function(event) {
-  console.log("hello");
+let button3 = document.getElementById("modals-button-section3");
+button1.addEventListener("mouseenter", function(event) {
+  gsap.to("#button-effect1",{duration:0.2,height:60,transformOrigin:"50% bottom"});
+});
+
+button1.addEventListener("mouseleave", function(event) {
+  gsap.to("#button-effect1",{duration:0.2,height:0,transformOrigin:"0% 0%"});
+});
+
+button2.addEventListener("mouseenter", function(event) {
+  gsap.to("#button-effect2",{duration:0.2,height:60,transformOrigin:"50% bottom"});
+});
+
+button2.addEventListener("mouseleave", function(event) {
+  gsap.to("#button-effect2",{duration:0.2,height:0,transformOrigin:"0% 0%"});
+});
+
+button3.addEventListener("mouseenter", function(event) {
+  gsap.to("#button-effect3",{duration:0.2,height:60,transformOrigin:"50% bottom"});
+});
+
+button3.addEventListener("mouseleave", function(event) {
+  gsap.to("#button-effect3",{duration:0.2,height:0,transformOrigin:"0% 0%"});
 });

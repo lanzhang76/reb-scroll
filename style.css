@@ -142,12 +142,23 @@ img {
 
 .button-effect{
   position:absolute;
-  width:0px;
-  border-radius:50%;
-  height:60px;
-  background:red;
+  width:200px;
+  height:0px;
   margin-left:0px;
+  transform-origin: 0% 0%;
   z-index:0;
+}
+
+#button-effect1{
+  background:#EB36C0;
+}
+
+#button-effect2{
+  background:#31CADB;
+}
+
+#button-effect3{
+  background:#8F5FBE;
 }
 
 /* CONTENT MIDDLE */
