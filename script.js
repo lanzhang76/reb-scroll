@@ -2,15 +2,20 @@ let initiate = true;
 
 function initAnimation() {
   // initation
-  gsap.fromTo("#bg-img", { duration: 3, scale: 2.2 }, { scale: 1.3 });
+  // gsap.fromTo("#bg-img", { duration: 4, scale: 2.2,delay:2 }, { scale: 1.3 });
+  gsap.set([".branch-bud", "#branch-apple"], { scale: 0.98, x: 3, y: 0 });
   const branchtl = gsap
     .timeline()
     .fromTo(
       ".branch",
-      { scale: 1.3, x: -800,y:10,duration: 2,rotation: "-=12"},
-      { autoAlpha: 1, x:0, y:-20,scale: 1, duration: 2,rotation: 0 }
+      { scale: 1.3, x: -800, y: 10, duration: 2, rotation: "-=12" },
+      { autoAlpha: 1, x: 0, y: -20, scale: 1, duration: 2, rotation: 0 }
     )
-  .fromTo([".branch-bud","#branch-apple"],{duration:0.5},{duration:1,aut});
+    .to(
+      [".branch-bud", "#branch-apple"],
+      { duration: 3, scale: 1, x: 0, y: 0 },
+    );
+
   // .fromTo(
   //   ".branch",
   //   {
@@ -40,11 +45,11 @@ function animate() {
 
   $("body").mousemove(function(e) {
     // console.log(e.pageX,e.pageY);
-    //     var xDiff = e.pageX - centerX;
-    //     var yDiff = e.pageY - centerY;
-    //     var mapped_xDiff = map(xDiff, -800, 800, 1.02, 1);
+        var xDiff = e.pageX - centerX;
+        var yDiff = e.pageY - centerY;
+        var mapped_xDiff = map(xDiff, -800, 800, 1.02, 1);
     //     // bg movement
-    //     gsap.to(".bg", { scale: mapped_xDiff, transformOrigin: "50% 50%" });
+        gsap.to(".bg", { scale: mapped_xDiff, transformOrigin: "50% 50%" });
     //     //branch
     //     var apple_yDiff = map(yDiff, -800, 800, 3, -3);
     //     // gsap.to(".branch", { y:apple_yDiff});
