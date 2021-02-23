@@ -10,16 +10,16 @@ function initAnimation() {
       ".branch",
       { scale: 1.3, x: -800, duration: 2, rotation: "-=12" },
       { autoAlpha: 1, x: 0, scale: 1, duration: 2, rotation: 0 }
-    )
-    .to([".branch-bud", "#branch-apple"], {
-      duration: 3,
-      scale: 1,
-      x: 0,
-      y: 0
-    });
+    );
+    // .to([".branch-bud", "#branch-apple"], {
+    //   duration: 2,
+    //   scale: 1,
+    //   x: 0,
+    //   y: 0
+    // });
 
   initiate = false;
-  animateLeaf();
+  animate();
 }
 
 function animate() {
@@ -27,35 +27,32 @@ function animate() {
   var centerX = window.innerWidth / 2;
   var centerY = window.innerHeight / 2;
 
-  $("body").mousemove(function(e) {
-    var xDiff = e.pageX - centerX;
-    var yDiff = e.pageY - centerY;
-    var mapped_scaleDiff = map(yDiff, -800, 800, 1.6, 1.1);
-    var mapped_xDiff = map(xDiff, -800, 800, -10, 10);
-    //     // bg movement
-    gsap.to("#bg-img", {
-      scale: mapped_scaleDiff,
-      x: mapped_xDiff,
-      transformOrigin: "50% 50%"
-    });
+//   $("body").mousemove(function(e) {
+//     var xDiff = e.pageX - centerX;
+//     var yDiff = e.pageY - centerY;
+//     var mapped_scaleDiff = map(yDiff, -800, 800, 1.6, 1.1);
+//     var mapped_xDiff = map(xDiff, -800, 800, -10, 10);
+//     //     // bg movement
+//     gsap.to("#bg-img", {
+//       scale: mapped_scaleDiff,
+//       x: mapped_xDiff,
+//       transformOrigin: "50% 50%"
+//     });
 
-    //branch
-    if (initiate == false) {
-      var branch_yDiff = map(yDiff, -300, 300, 8, -8);
-      var branch_xDiff = map(xDiff, -800, 800, 15, -15);
-      gsap.to(".branch", { duration: 1, y: branch_yDiff });
+//     //branch
+//     if (initiate == false) {
+//       var branch_yDiff = map(yDiff, -300, 300, 8, -8);
+//       var branch_xDiff = map(xDiff, -800, 800, 15, -15);
+//       gsap.to(".branch", { duration: 1, y: branch_yDiff });
 
-      // apple movement
-    }
-  });
+//       // apple movement
+//     }
+//   });
 
   //button
 }
 
-if (stage == 1) {
   initAnimation();
-  setTimeout(animate(), 5000);
-}
 
 let button1 = document.getElementById("modals-button-section1");
 let button2 = document.getElementById("modals-button-section2");

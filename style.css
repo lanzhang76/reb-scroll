@@ -265,3 +265,11 @@ img {
   background: url("https://cdn.glitch.com/1c58e947-ed43-426c-9eb9-d3a01255d866%2Fleaf_bottom.png?v=1613760738248");
   background-size: 100% 100%;
 }
+
+.dot-blur{
+ width:50px;
+  height:40px;
+  position:absolute;
+  background: url("https://cdn.glitch.com/1c58e947-ed43-426c-9eb9-d3a01255d866%2Fleaf_right.png?v=1613760718338");
+  background-size: 100% 100%;
+}

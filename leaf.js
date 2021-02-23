@@ -1,14 +1,11 @@
 let stage = 1;
 var falling = true;
+var container = document.getElementById("animate-components"),
+  w = window.innerWidth,
+  h = window.innerHeight;
+gsap.set("#animate-components", { perspective: 600 });
 
-function animateLeaf(){
-  gsap.set("#animate-components", { perspective: 600 });
-
-  var total = 4;
-  var container = document.getElementById("animate-components"),
-    w = window.innerWidth,
-    h = window.innerHeight;
-
+  var total = 2;
   for (let i = 0; i < total; i++) {
     var Div = document.createElement("div");
     gsap.set(Div, {
@@ -20,16 +17,28 @@ function animateLeaf(){
     container.append(Div);
     animm(Div);
   }
-}
+
+ var total = 2;
+  for (let i = 0; i < total; i++) {
+    var Div = document.createElement("div");
+    gsap.set(Div, {
+      attr: { class: "dot-blur" },
+      x: R(0, w),
+      y: R(-200, -150),
+      z: R(-200, 200)
+    });
+    container.append(Div);
+    animm(Div);
+  }
 
 function animm(elm) {
-  gsap.to(elm, R(10, 18), {
+  gsap.to(elm, R(15, 25), {
     y: h + 100,
     ease: Linear.easeNone,
     repeat: -1,
     delay: -15
   });
-  gsap.to(elm, R(8, 12), {
+  gsap.to(elm, R(4, 8), {
     x: "+=100",
     rotationZ: R(0, 180),
     repeat: -1,
