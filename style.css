@@ -219,13 +219,13 @@ img {
   left: 920px;
 }
 
-#branch-bud1{
-  z-index:98;
-} 
+#branch-bud1 {
+  z-index: 98;
+}
 
 #branch-apple img:hover {
   transition: all 1s ease-out;
-  transform: scale(1.05, 1.05) translate(0,3px);
+  transform: scale(1.05, 1.05) translate(0, 3px);
   transformorigin: 100% 100%;
 }
 
@@ -236,7 +236,7 @@ img {
 
 .branch-bud img:hover {
   transition: all 1s ease-out;
-  transform: scale(1.01, 1.01) translate(-5px,0px);
+  transform: scale(1.01, 1.01) translate(-5px, 0px);
   transformorigin: 100% 100%;
 }
 
@@ -247,4 +247,20 @@ img {
   position: absolute;
   left: 0;
   top: 0;
+}
+
+#animate-components {
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  top:0;
+  z-index: -1;
+}
+
+.dot{
+  width:35px;
+  height:35px;
+  position:absolute;
+  background: url("https://cdn.glitch.com/1c58e947-ed43-426c-9eb9-d3a01255d866%2Fleaf_bottom.png?v=1613760738248");
+  background-size: 100% 100%;
 }
