@@ -59,15 +59,12 @@ function animate() {
 
     //branch
     if (initiate == false) {
-      var branch_yDiff = map(yDiff, -600, 600, 8, -8);
+      var branch_yDiff = map(yDiff, -300, 300, 8, -8);
       var branch_xDiff = map(xDiff, -800, 800, 15, -15);
-      gsap.to(".branch", { duration: 1, x: branch_xDiff, y: branch_yDiff });
+      gsap.to(".branch", { duration: 1,  y: branch_yDiff });
 
       // apple movement
-      var apple_xDiff = map(xDiff, -600, 600, 1, -2);
-      var apple_yDiff = map(yDiff, -800, 800, 0.5, -0.5);
-      var apple_scaleDiff = map(yDiff, -200, 200, 1, 1.05);
-      gsap.to("#branch-apple", { duration:1,scale: apple_scaleDiff });
+      
     }
   });
 

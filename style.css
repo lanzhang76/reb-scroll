@@ -213,25 +213,30 @@ img {
 }
 
 #branch-apple {
-  z-index: -1;
+  z-index: 100;
   width: 150px;
   top: 553px;
   left: 920px;
 }
 
+#branch-bud1{
+  z-index:98;
+} 
+
 #branch-apple img:hover {
   transition: all 1s ease-out;
-  transform: scale(1.01, 1.01);
+  transform: scale(1.05, 1.05) translate(0,3px);
   transformorigin: 100% 100%;
 }
 
+.branch-bud img,
 #branch-apple img {
   transition: all 1s ease-out;
 }
 
 .branch-bud img:hover {
   transition: all 1s ease-out;
-  transform: scale(1.01, 1.01);
+  transform: scale(1.01, 1.01) translate(-5px,0px);
   transformorigin: 100% 100%;
 }
 
