@@ -8,13 +8,15 @@ function initAnimation() {
     .timeline()
     .fromTo(
       ".branch",
-      { scale: 1.3, x: -800, y: 10, duration: 2, rotation: "-=12" },
-      { autoAlpha: 1, x: 0, y: -20, scale: 1, duration: 2, rotation: 0 }
+      { scale: 1.3, x: -800, duration: 2, rotation: "-=12" },
+      { autoAlpha: 1, x: 0, scale: 1, duration: 2, rotation: 0 }
     )
-    .to(
-      [".branch-bud", "#branch-apple"],
-      { duration: 3, scale: 1, x: 0, y: 0 },
-    );
+    .to([".branch-bud", "#branch-apple"], {
+      duration: 3,
+      scale: 1,
+      x: 0,
+      y: 0
+    });
 
   // .fromTo(
   //   ".branch",
@@ -44,19 +46,29 @@ function animate() {
   var centerY = window.innerHeight / 2;
 
   $("body").mousemove(function(e) {
-    // console.log(e.pageX,e.pageY);
-        var xDiff = e.pageX - centerX;
-        var yDiff = e.pageY - centerY;
-        var mapped_xDiff = map(xDiff, -800, 800, 1.02, 1);
+    var xDiff = e.pageX - centerX;
+    var yDiff = e.pageY - centerY;
+    var mapped_scaleDiff = map(yDiff, -800, 800, 1.6, 1.1);
+    var mapped_xDiff = map(xDiff, -800, 800, -10, 10);
     //     // bg movement
-        gsap.to(".bg", { scale: mapped_xDiff, transformOrigin: "50% 50%" });
-    //     //branch
-    //     var apple_yDiff = map(yDiff, -800, 800, 3, -3);
-    //     // gsap.to(".branch", { y:apple_yDiff});
-    //     // apple movement
-    //     var apple_xDiff = map(xDiff, -600, 600, 1, -2);
-    //     var apple_yDiff = map(yDiff, -800, 800, 0.5, -0.5);
-    // gsap.to("#branch-apple", { y: apple_xDiff, rotation: apple_yDiff});
+    gsap.to("#bg-img", {
+      scale: mapped_scaleDiff,
+      x: mapped_xDiff,
+      transformOrigin: "50% 50%"
+    });
+
+    //branch
+    if (initiate == false) {
+      var branch_yDiff = map(yDiff, -600, 600, 8, -8);
+      var branch_xDiff = map(xDiff, -800, 800, 15, -15);
+      gsap.to(".branch", { duration: 1, x: branch_xDiff, y: branch_yDiff });
+
+      // apple movement
+      var apple_xDiff = map(xDiff, -600, 600, 1, -2);
+      var apple_yDiff = map(yDiff, -800, 800, 0.5, -0.5);
+      var apple_scaleDiff = map(yDiff, -200, 200, 1, 1.05);
+      gsap.to("#branch-apple", { duration:1,scale: apple_scaleDiff });
+    }
   });
 
   //button
