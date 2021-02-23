@@ -44,6 +44,11 @@ img {
   font-size: 13px;
 }
 
+.container-wrapper{
+  width:1200px;
+  height:795px;
+}
+
 .main {
   overflow: hidden;
   box-sizing: border-box;
