@@ -2,52 +2,26 @@ let initiate = true;
 
 function initAnimation() {
   // initation
-  gsap.fromTo(".bg", { duration: 5, x:50,scale: 2.2 }, { scale: 1.3 });
-  const branchtl = gsap.timeline({delay:0.5})
-  .from(".branch", { duration: 2, opacity:0,scale: 2, x:15 ,y:5,rotation: "-=2" })
-  // .to(".branch",{duration:0.5,y:-2})
-  // .to(".branch",{duration:0.5,y:2})
-  .to(".branch",{duration:0.5,y:-1})
-  .to(".branch",{duration:0.5,y:1,})
-  .to(".branch",{duration:0.5,y:0,ease: "bounce.out",})
-  .from(".branch-bud",{duration:3, opacity:0,scale:0.85});
-  gsap.to("#branch-apple",{duration:1,x:-10,y:-4,scale:1.02});
-
-//   gsap.from(".animate-leaf", {
-//     duration: 2,
-//     scale: 0.5,
-//     opacity: 0.3,
-//     x: 0,
-//     y: "-=3",
-//     transformOrigin: "50% top"
-//   });
-//   gsap.from(".animate-flower", {
-//     duration: 5,
-//     scale: 0.8,
-//     opacity: 0.8,
-//     rotate: "-=25",
-//     transformOrigin: "50% 50%"
-//   });
-//   gsap.from(".animate-bud", {
-//     duration: 5,
-//     scale: 1.2,
-//     opacity: 0.8,
-//     rotate: "+=25",
-//     transformOrigin: "50% 50%"
-//   });
-
-//   const leaftl = gsap
-//     .timeline()
-//     .to(
-//       ["#animate-leaf-bottom"],
-//       { duration: 2, x: "-=15", y: "+=15" },
-//       "-=0.5"
-//     )
-//     .to(["#animate-leaf-bottom"], { duration: 2, x: 0, y: 0 })
-//     .to(["#animate-leaf-left"], { duration: 2, x: "-=5", y: "+=5" }, "-=0.5")
-//     .to(["#animate-leaf-left"], { duration: 2, x: 0, y: 0 })
-//     .to(["#animate-leaf-right"], { duration: 2, x: "-=10", y: "-=5" }, "-=1")
-//     .to(["#animate-leaf-top"], { duration: 2, rotate: "+=3" }, "-=2");
+  gsap.fromTo(".bg", { duration: 5, x: 50, scale: 2.2 }, { x: 0,scale: 1.3 });
+  const branchtl = gsap
+    .timeline({ delay: 0.5 })
+    .from(".branch", {
+      duration: 2,
+      opacity: 0,
+      scale: 2,
+      x: 15,
+      y: 5,
+      rotation: "-=2"
+    })
+    // .to(".branch",{duration:0.5,y:-2})
+    // .to(".branch",{duration:0.5,y:2})
+    .to(".branch", { duration: 0.5, y: -1 })
+    .to(".branch", { duration: 0.5, y: 1 })
+    .to(".branch", { duration: 0.5, y: 0, ease: "bounce.out" });
+  const elementtl = gsap
+    .timeline()
+    .from(".branch-bud", { duration: 1, opacity: 0, scale: 0.95 })
+    .to("#branch-apple", { duration: 1, x: -10, y: -4, scale: 1.02 });
 
   initiate = false;
 }
@@ -64,18 +38,16 @@ function animate() {
     var mapped_xDiff = map(xDiff, -800, 800, 1.02, 1);
 
     // bg movement
-    gsap.to(".bg", { scale: mapped_xDiff, transformOrigin:"50% 50%" });
-    
+    gsap.to(".bg", { scale: mapped_xDiff, transformOrigin: "50% 50%" });
+
     //branch
     var apple_yDiff = map(yDiff, -800, 800, 3, -3);
-    gsap.to(".branch", { y:apple_yDiff});
-    
-    
+    // gsap.to(".branch", { y:apple_yDiff});
+
     // apple movement
     var apple_xDiff = map(xDiff, -600, 600, 1, -2);
     var apple_yDiff = map(yDiff, -800, 800, 0.5, -0.5);
-    gsap.to("#branch-apple", { y: apple_xDiff, rotation: apple_yDiff});
-
+    // gsap.to("#branch-apple", { y: apple_xDiff, rotation: apple_yDiff});
   });
 
   //button
@@ -83,48 +55,54 @@ function animate() {
 
 initAnimation();
 
-
 setTimeout(animate(), 5000);
 let button1 = document.getElementById("modals-button-section1");
 let button2 = document.getElementById("modals-button-section2");
 let button3 = document.getElementById("modals-button-section3");
 
-const overlay = {in:{duration:0.2,height:90},out:{duration:0.2,height:0}};
-const buttonJump = {y:-2};
-const caretZoom = {in:{duration:1,x:4}, out:{duration:0.6,x:-4}};
+const overlay = {
+  in: { duration: 0.2, height: 90 },
+  out: { duration: 0.2, height: 0 }
+};
+const buttonJump = { y: -2 };
+const caretZoom = { in: { duration: 1, x: 4 }, out: { duration: 0.6, x: -4 } };
 
 button1.addEventListener("mouseenter", function(event) {
-  gsap.to(button1,buttonJump);
-  gsap.to("#button-effect1",overlay.in);
-  gsap.to("#caret1",caretZoom.in);
+  gsap.to(button1, buttonJump);
+  gsap.to("#button-effect1", overlay.in);
+  gsap.to("#caret1", caretZoom.in);
 });
 
 button1.addEventListener("mouseleave", function(event) {
-  gsap.to(button1,{y:0});
-  gsap.to("#button-effect1",overlay.out);
-  gsap.to("#caret1",caretZoom.out);
+  gsap.to(button1, { y: 0 });
+  gsap.to("#button-effect1", overlay.out);
+  gsap.to("#caret1", caretZoom.out);
 });
 
 button2.addEventListener("mouseenter", function(event) {
-  gsap.to(button2,buttonJump);
-  gsap.to("#button-effect2",{duration:0.2,height:90,transformOrigin:"50% bottom"});
-  gsap.to("#caret2",caretZoom.in);
+  gsap.to(button2, buttonJump);
+  gsap.to("#button-effect2", {
+    duration: 0.2,
+    height: 90,
+    transformOrigin: "50% bottom"
+  });
+  gsap.to("#caret2", caretZoom.in);
 });
 
 button2.addEventListener("mouseleave", function(event) {
-  gsap.to(button2,{y:0});
-  gsap.to("#button-effect2",{duration:0.2,height:0});
-  gsap.to("#caret2",caretZoom.out);
+  gsap.to(button2, { y: 0 });
+  gsap.to("#button-effect2", { duration: 0.2, height: 0 });
+  gsap.to("#caret2", caretZoom.out);
 });
 
 button3.addEventListener("mouseenter", function(event) {
-  gsap.to(button3,buttonJump);
-  gsap.to("#button-effect3",{duration:0.2,height:90});
-  gsap.to("#caret3",caretZoom.in);
+  gsap.to(button3, buttonJump);
+  gsap.to("#button-effect3", { duration: 0.2, height: 90 });
+  gsap.to("#caret3", caretZoom.in);
 });
 
 button3.addEventListener("mouseleave", function(event) {
-  gsap.to(button3,{y:0});
-  gsap.to("#button-effect3",{duration:0.2,height:0});
-  gsap.to("#caret3",caretZoom.out);
+  gsap.to(button3, { y: 0 });
+  gsap.to("#button-effect3", { duration: 0.2, height: 0 });
+  gsap.to("#caret3", caretZoom.out);
 });
