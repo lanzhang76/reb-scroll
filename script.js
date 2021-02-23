@@ -2,15 +2,17 @@ let initiate = true;
 
 function initAnimation() {
   // initation
-  gsap.fromTo(".bg", { duration: 5, scale: 2.2 }, { scale: 1.3 });
-  const branchtl = gsap.timeline()
-  .from(".branch", { duration: 2, scale: 0.95, x:15 ,y:5,rotation: "-=2" })
-  .to(".branch",{duration:0.5,y:-2})
-  .to(".branch",{duration:0.5,y:2})
+  gsap.fromTo(".bg", { duration: 5, x:50,scale: 2.2 }, { scale: 1.3 });
+  const branchtl = gsap.timeline({delay:0.5})
+  .from(".branch", { duration: 2, opacity:0,scale: 2, x:15 ,y:5,rotation: "-=2" })
+  // .to(".branch",{duration:0.5,y:-2})
+  // .to(".branch",{duration:0.5,y:2})
   .to(".branch",{duration:0.5,y:-1})
   .to(".branch",{duration:0.5,y:1,})
-  .to(".branch",{duration:0.5,y:0,})
-  .to("#branch-apple",{duration:1,x:-10,y:-4,scale:1.02});
+  .to(".branch",{duration:0.5,y:0,ease: "bounce.out",})
+  .from(".branch-bud",{duration:3, opacity:0,scale:0.85});
+  gsap.to("#branch-apple",{duration:1,x:-10,y:-4,scale:1.02});
+
 //   gsap.from(".animate-leaf", {
 //     duration: 2,
 //     scale: 0.5,
@@ -59,14 +61,14 @@ function animate() {
     // console.log(e.pageX,e.pageY);
     var xDiff = e.pageX - centerX;
     var yDiff = e.pageY - centerY;
-    var mapped_xDiff = map(xDiff, -800, 800, 1.09, 1);
+    var mapped_xDiff = map(xDiff, -800, 800, 1.02, 1);
 
     // bg movement
-    gsap.to(".bg", { scale: mapped_xDiff });
+    gsap.to(".bg", { scale: mapped_xDiff, transformOrigin:"50% 50%" });
     
-//     //branch
-//     var apple_yDiff = map(yDiff, -800, 800, 3, -3);
-//     gsap.to(".branch-el", { rotation:apple_yDiff*0.3 });
+    //branch
+    var apple_yDiff = map(yDiff, -800, 800, 3, -3);
+    gsap.to(".branch", { y:apple_yDiff});
     
     
     // apple movement
@@ -74,14 +76,6 @@ function animate() {
     var apple_yDiff = map(yDiff, -800, 800, 0.5, -0.5);
     gsap.to("#branch-apple", { y: apple_xDiff, rotation: apple_yDiff});
 
-    // leaves movement
-    // var apple_xDiff = map(xDiff, -600, 600, 5, -5);
-    // var apple_yDiff = map(yDiff, -800, 800, 2, -2);
-    // gsap.to(".animate-leaf", { y: apple_yDiff, x: apple_xDiff });
-
-    // flowers
-    // gsap.to("#animate-flower-mid", { rotate: "+=" + apple_xDiff * 0.3 });
-    // gsap.to("#animate-flower-bot", { rotate: "+=" + apple_yDiff * 0.8 });
   });
 
   //button
