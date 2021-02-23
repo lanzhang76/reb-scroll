@@ -56,20 +56,25 @@ function animate() {
 
     // bg movement
     gsap.to(".bg", { scale: mapped_xDiff });
-
+    
+//     //branch
+//     var apple_yDiff = map(yDiff, -800, 800, 3, -3);
+//     gsap.to(".branch-el", { rotation:apple_yDiff*0.3 });
+    
+    
     // apple movement
     var apple_xDiff = map(xDiff, -600, 600, 3, -3);
     var apple_yDiff = map(yDiff, -800, 800, 3, -3);
-    gsap.to("#apple", { y: apple_xDiff, x: apple_yDiff });
+    gsap.to("#branch-apple", { y: apple_xDiff, x: apple_yDiff});
 
     // leaves movement
-    var apple_xDiff = map(xDiff, -600, 600, 5, -5);
-    var apple_yDiff = map(yDiff, -800, 800, 2, -2);
-    gsap.to(".animate-leaf", { y: apple_yDiff, x: apple_xDiff });
+    // var apple_xDiff = map(xDiff, -600, 600, 5, -5);
+    // var apple_yDiff = map(yDiff, -800, 800, 2, -2);
+    // gsap.to(".animate-leaf", { y: apple_yDiff, x: apple_xDiff });
 
     // flowers
-    gsap.to("#animate-flower-mid", { rotate: "+=" + apple_xDiff * 0.3 });
-    gsap.to("#animate-flower-bot", { rotate: "+=" + apple_yDiff * 0.8 });
+    // gsap.to("#animate-flower-mid", { rotate: "+=" + apple_xDiff * 0.3 });
+    // gsap.to("#animate-flower-bot", { rotate: "+=" + apple_yDiff * 0.8 });
   });
 
   //button

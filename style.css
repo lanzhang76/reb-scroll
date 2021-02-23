@@ -54,12 +54,12 @@ img {
 }
 
 .header {
-  width:100%;
+  width: 100%;
   position: fixed;
-  background:white;
+  background: white;
   box-sizing: border-box;
   padding: 10px 20px 10px 20px;
-  z-index:10;
+  z-index: 10;
 }
 
 .footer {
@@ -73,12 +73,6 @@ img {
   bottom: 0;
 }
 
-
-
-
-
-
-
 .modals {
   display: flex;
   justify-content: space-around;
@@ -90,7 +84,7 @@ img {
   padding: 25px;
   border-radius: 10px;
   background: white;
-  opacity:0.8;
+  opacity: 0.8;
   display: flex;
   flex-direction: column;
 }
@@ -107,80 +101,76 @@ img {
 
 .modals-button-section {
   width: 165px;
-  height:45px;
+  height: 45px;
   padding: 10px;
   border-radius: 25px;
   color: white;
-  overflow:hidden;
-  position:relative;
-  
+  overflow: hidden;
+  position: relative;
 }
 
-.modals-button-section .button-label{
-  
+.modals-button-section .button-label {
   display: flex;
-  flex-direction:row;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  z-index:100;
-  
+  z-index: 100;
 }
 
-.modals-button-section .modal-button-text{
-  z-index:20;
+.modals-button-section .modal-button-text {
+  z-index: 20;
 }
 
 .modals-button-section .caret {
   margin-left: 10px;
   width: 8px;
-  z-index:20;
-  
+  z-index: 20;
 }
 
-.modals-button-section .caret img{
-  width:100%;
+.modals-button-section .caret img {
+  width: 100%;
 }
 
 #modals-button-section1 {
   background: linear-gradient(#EB36C0, #D3198C);
 }
-#modals-button-section1:hover{
-  box-shadow: 0px 4px 10px  #EB36C0;
+#modals-button-section1:hover {
+  box-shadow: 0px 4px 10px #EB36C0;
 }
 
 #modals-button-section2 {
   background: linear-gradient(#31CADB, #169AB4);
 }
-#modals-button-section2:hover{
+#modals-button-section2:hover {
   box-shadow: 0px 4px 10px #31CADB;
 }
 
 #modals-button-section3 {
   background: linear-gradient(#8F5FBE, #563189);
 }
-#modals-button-section3:hover{
+#modals-button-section3:hover {
   box-shadow: 0px 4px 10px #8F5FBE;
 }
 
-.button-effect{
-  position:absolute;
-  width:200px;
-  height:0px;
-  left:0px;
-  top:0px;
-  z-index:0;
+.button-effect {
+  position: absolute;
+  width: 200px;
+  height: 0px;
+  left: 0px;
+  top: 0px;
+  z-index: 0;
 }
 
-#button-effect1{
-  background:#EB36C0;
+#button-effect1 {
+  background: #EB36C0;
 }
 
-#button-effect2{
-  background:#31CADB;
+#button-effect2 {
+  background: #31CADB;
 }
 
-#button-effect3{
-  background:#8F5FBE;
+#button-effect3 {
+  background: #8F5FBE;
 }
 
 /* CONTENT MIDDLE */
@@ -188,32 +178,46 @@ img {
 .content {
   display: flex;
   align-items: center;
-/*   justify-content: center; */
+  /*   justify-content: center; */
   margin: 80px 0;
 }
 
 .content-text {
   width: 500px;
-  margin-left:5%;
-  margin-top:18%;
-  position:relative;
+  margin-left: 5%;
+  margin-top: 18%;
+  position: relative;
 }
 
-.branch{
-  z-index:0;
-  position:absolute;
-  width:1105px;
-  top:-300px;
-  transform:rotate(-1deg);
-  left:-130px;
+.branch {
+  z-index: 0;
+  position: absolute;
+  width: 1105px;
+  top: -300px;
+  transform: rotate(-1deg);
+  left: -130px;
 }
 
-.branch img{
-  width:100%;
+.branch img {
+  width: 100%;
 }
 
-.branch-el{
-  width:100%;
-  position:absolute;
-  top:0;
+.branch-el {
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+
+#branch-apple{
+  z-index:100;
+}
+
+#branch-apple img:hover {
+  transition: all 1s ease-out;
+  transform: scale(1.01, 1.01);
+  transformOrigin: 100% 100%;
+}
+
+#branch-apple img {
+  transition: all 1s ease-out;
 }
