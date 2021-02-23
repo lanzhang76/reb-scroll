@@ -7,8 +7,11 @@
   visibility: hidden;
 }
 
-h2 {
+h2,
+h3,
+p {
   margin: 0px;
+  line-height: 1.4em;
 }
 
 h1 {
@@ -44,14 +47,14 @@ img {
   font-size: 13px;
 }
 
-.container-wrapper{
-  width:1200px;
-  height:795px;
+.container-wrapper {
+  width: 1200px;
+  height: 795px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  box-shadow:0 0 10px rgba(0,0,0,0.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .main {
@@ -79,7 +82,7 @@ img {
 
 .footer {
   position: fixed;
-  z-index:20;
+  z-index: 20;
   width: 100%;
   bottom: 0;
 }
@@ -93,17 +96,22 @@ img {
   display: flex;
   flex-direction: column;
   z-index: 3;
+  /*    */
+  background: beige;
+  padding: 30px;
 }
 
 .modals-section {
   width: 600px;
-  height:90px;
+  height: 90px;
   padding: 25px;
+  margin: 20px;
   border-radius: 10px;
   background: white;
   opacity: 0.8;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 
 .modals-section:hover {
@@ -117,21 +125,26 @@ img {
 }
 
 .modals-button-section {
-  width: 165px;
-  height: 45px;
-  padding: 10px;
+  width: 185px;
+  height: 32px;
   border-radius: 25px;
   color: white;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
 }
 
 .modals-button-section .button-label {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   z-index: 100;
+}
+
+.button-caption {
+  line-height: 1.1em;
 }
 
 .modals-button-section .modal-button-text {
@@ -149,23 +162,9 @@ img {
 }
 
 #modals-button-section1 {
-  background: linear-gradient(#EB36C0, #D3198C);
-}
-#modals-button-section1:hover {
-  box-shadow: 0px 4px 10px #EB36C0;
-}
-
-#modals-button-section2 {
-  background: linear-gradient(#31CADB, #169AB4);
-}
-#modals-button-section2:hover {
-  box-shadow: 0px 4px 10px #31CADB;
-}
-
-#modals-button-section3 {
   background: linear-gradient(#8F5FBE, #563189);
 }
-#modals-button-section3:hover {
+#modals-button-section1:hover {
   box-shadow: 0px 4px 10px #8F5FBE;
 }
 
@@ -178,8 +177,8 @@ img {
   z-index: 0;
 }
 
-#button-effect1 {
-  background: #EB36C0;
+.button-effect1 {
+  background: #8F5FBE;
 }
 
 #button-effect2 {
@@ -190,12 +189,15 @@ img {
   background: #8F5FBE;
 }
 
+
+
 /* CONTENT MIDDLE */
 
 .content {
   display: flex;
   align-items: center;
   margin: 60px 0;
+  background: grey;
 }
 
 .content-text {
@@ -203,86 +205,4 @@ img {
   margin-left: 5%;
   margin-top: 18%;
   position: relative;
-}
-
-.branch {
-  z-index: 0;
-  position: absolute;
-  width: 1105px;
-  top: -330px;
-  transform: rotate(-1deg);
-  left: -130px;
-}
-
-.branch img {
-  width: 100%;
-}
-
-.branch-el {
-  width: 100%;
-  position: absolute;
-  top: 0;
-}
-
-#branch-apple {
-  z-index: 100;
-  width: 150px;
-  top: 553px;
-  left: 920px;
-}
-
-#branch-bud1 {
-  z-index: 98;
-}
-
-#branch-apple img:hover {
-  transition: all 1s ease-out;
-  transform: scale(1.05, 1.05) translate(0, 3px);
-  transformorigin: 100% 100%;
-}
-
-.branch-bud img,
-#branch-apple img {
-  transition: all 1s ease-out;
-}
-
-/* 
-.branch-bud img:hover {
-  transition: all 1s ease-out;
-  transform: scale(1.01, 1.01) translate(-5px, 0px);
-  transformorigin: 100% 100%;
-}
- */
-.animate-wrapper {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-
-#animate-components {
-  position:absolute;
-  width: 100%;
-  height: 100%;
-  overflow:hidden;
-  top:0;
-  z-index: -1;
-}
-
-.dot{
-  width:70px;
-  height:60px;
-  position:absolute;
-  background: url("https://cdn.glitch.com/1c58e947-ed43-426c-9eb9-d3a01255d866%2Fleaf_bottom.png?v=1613760738248");
-  background-size: 100% 100%;
-}
-
-.dot-blur{
- width:50px;
-  height:40px;
-  position:absolute;
-  background: url("https://cdn.glitch.com/1c58e947-ed43-426c-9eb9-d3a01255d866%2Fleaf_right.png?v=1613760718338");
-  background-size: 100% 100%;
 }
