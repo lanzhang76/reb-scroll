@@ -2,26 +2,28 @@ let initiate = true;
 
 function initAnimation() {
   // initation
-  gsap.fromTo(".bg", { duration: 5, x: 50, scale: 2.2 }, { x: 0,scale: 1.3 });
+  gsap.fromTo("#bg-img", { duration: 3, scale: 2.2 }, { scale: 1.3 });
   const branchtl = gsap
-    .timeline({ delay: 0.5 })
-    .from(".branch", {
-      duration: 2,
-      opacity: 0,
-      scale: 2,
-      x: 15,
-      y: 5,
-      rotation: "-=2"
-    })
-    // .to(".branch",{duration:0.5,y:-2})
-    // .to(".branch",{duration:0.5,y:2})
-    .to(".branch", { duration: 0.5, y: -1 })
-    .to(".branch", { duration: 0.5, y: 1 })
-    .to(".branch", { duration: 0.5, y: 0, ease: "bounce.out" });
-  const elementtl = gsap
     .timeline()
-    .from(".branch-bud", { duration: 1, opacity: 0, scale: 0.95 })
-    .to("#branch-apple", { duration: 1, x: -10, y: -4, scale: 1.02 });
+    .to(".branch", { autoAlpha: 1,duration:0.5,delay:0.2 })
+    .fromTo(
+      ".branch",
+      {
+        duration: 2,
+        scale: 2,
+        x: 15,
+        y: 5,
+        transformOrigin: "0% 0%",
+        rotation: "-=2"
+      },
+    )
+  //   .to(".branch", { duration: 0.5, y: -1 })
+  //   .to(".branch", { duration: 0.5, y: 1 })
+  //   .to(".branch", { duration: 0.5, y: 0, ease: "bounce.out" });
+  // const elementtl = gsap
+  //   .timeline()
+  //   .from(".branch-bud", { duration: 1, opacity: 0, scale: 0.95 })
+  //   .to("#branch-apple", { duration: 1, x: -10, y: -4, scale: 1.02 });
 
   initiate = false;
 }
@@ -33,20 +35,20 @@ function animate() {
 
   $("body").mousemove(function(e) {
     // console.log(e.pageX,e.pageY);
-    var xDiff = e.pageX - centerX;
-    var yDiff = e.pageY - centerY;
-    var mapped_xDiff = map(xDiff, -800, 800, 1.02, 1);
+//     var xDiff = e.pageX - centerX;
+//     var yDiff = e.pageY - centerY;
+//     var mapped_xDiff = map(xDiff, -800, 800, 1.02, 1);
 
-    // bg movement
-    gsap.to(".bg", { scale: mapped_xDiff, transformOrigin: "50% 50%" });
+//     // bg movement
+//     gsap.to(".bg", { scale: mapped_xDiff, transformOrigin: "50% 50%" });
 
-    //branch
-    var apple_yDiff = map(yDiff, -800, 800, 3, -3);
-    // gsap.to(".branch", { y:apple_yDiff});
+//     //branch
+//     var apple_yDiff = map(yDiff, -800, 800, 3, -3);
+//     // gsap.to(".branch", { y:apple_yDiff});
 
-    // apple movement
-    var apple_xDiff = map(xDiff, -600, 600, 1, -2);
-    var apple_yDiff = map(yDiff, -800, 800, 0.5, -0.5);
+//     // apple movement
+//     var apple_xDiff = map(xDiff, -600, 600, 1, -2);
+//     var apple_yDiff = map(yDiff, -800, 800, 0.5, -0.5);
     // gsap.to("#branch-apple", { y: apple_xDiff, rotation: apple_yDiff});
   });
 
