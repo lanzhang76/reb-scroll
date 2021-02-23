@@ -18,26 +18,8 @@ function initAnimation() {
       y: 0
     });
 
-  // .fromTo(
-  //   ".branch",
-  //   {
-  //     duration: 2,
-  //     scale: 2,
-  //     x: 15,
-  //     y: 5,
-  //     transformOrigin: "0% 0%",
-  //     rotation: "-=2"
-  //   }
-  // )
-  //   .to(".branch", { duration: 0.5, y: -1 })
-  //   .to(".branch", { duration: 0.5, y: 1 })
-  //   .to(".branch", { duration: 0.5, y: 0, ease: "bounce.out" });
-  // const elementtl = gsap
-  //   .timeline()
-  //   .from(".branch-bud", { duration: 1, opacity: 0, scale: 0.95 })
-  //   .to("#branch-apple", { duration: 1, x: -10, y: -4, scale: 1.02 });
-
   initiate = false;
+  animateLeaf();
 }
 
 function animate() {
@@ -61,19 +43,20 @@ function animate() {
     if (initiate == false) {
       var branch_yDiff = map(yDiff, -300, 300, 8, -8);
       var branch_xDiff = map(xDiff, -800, 800, 15, -15);
-      gsap.to(".branch", { duration: 1,  y: branch_yDiff });
+      gsap.to(".branch", { duration: 1, y: branch_yDiff });
 
       // apple movement
-      
     }
   });
 
   //button
 }
 
-initAnimation();
+if (stage == 1) {
+  initAnimation();
+  setTimeout(animate(), 5000);
+}
 
-setTimeout(animate(), 5000);
 let button1 = document.getElementById("modals-button-section1");
 let button2 = document.getElementById("modals-button-section2");
 let button3 = document.getElementById("modals-button-section3");
