@@ -209,7 +209,7 @@ img {
 }
 
 #branch-apple{
-  z-index:100;
+  z-index:-1;
 }
 
 #branch-apple img:hover {
@@ -220,4 +220,11 @@ img {
 
 #branch-apple img {
   transition: all 1s ease-out;
+}
+
+
+.branch-bud img:hover{
+  transition: all 1s ease-out;
+  transform: scale(1.01, 1.01);
+  transformOrigin: 100% 100%;
 }
