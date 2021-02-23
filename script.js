@@ -10,13 +10,13 @@ function initAnimation() {
       ".branch",
       { scale: 1.3, x: -800, duration: 2, rotation: "-=12" },
       { autoAlpha: 1, x: 0, scale: 1, duration: 2, rotation: 0 }
-    );
-    // .to([".branch-bud", "#branch-apple"], {
-    //   duration: 2,
-    //   scale: 1,
-    //   x: 0,
-    //   y: 0
-    // });
+    )
+    .to([".branch-bud", "#branch-apple"], {
+      duration: 2,
+      scale: 1,
+      x: 0,
+      y: 0
+    });
 
   initiate = false;
   animate();
