@@ -189,28 +189,31 @@ img {
   display: flex;
   align-items: center;
 /*   justify-content: center; */
-  margin: 130px 0;
+  margin: 100px 0;
 }
 
 .content-text {
   width: 500px;
   margin-left:5%;
-  margin-top:10%;
+  margin-top:15%;
   position:relative;
 }
 
 .branch{
   z-index:0;
   position:absolute;
-  width:915px;
-  top:0;
-  left:0;
+  width:1105px;
+  top:-300px;
+  transform:rotate(-1deg);
+  left:-130px;
 }
 
 .branch img{
   width:100%;
 }
 
-.branch-comp{
+.branch-el{
+  width:100%;
   position:absolute;
+  top:0;
 }
