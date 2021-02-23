@@ -33,3 +33,7 @@ function random(min, max) {
     return rand * (max - min) + min;
   }
 }
+
+function R(min, max) {
+  return min + Math.random() * (max - min);
+}

@@ -91,18 +91,19 @@ img {
 
 .modals {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
   z-index: 3;
 }
 
 .modals-section {
-  width: 300px;
+  width: 600px;
+  height:90px;
   padding: 25px;
   border-radius: 10px;
   background: white;
   opacity: 0.8;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 .modals-section:hover {
@@ -127,7 +128,7 @@ img {
 
 .modals-button-section .button-label {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   z-index: 100;
