@@ -103,11 +103,17 @@ img {
   padding: 30px;
 }
 
+.model-wrapper{
+  height:900px;
+  display:flex;
+  align-items:center;
+}
+
 .modals-section {
   width: 600px;
   height: 90px;
   padding: 25px;
-  margin: 500px 0px;
+/*   margin: 500px 0px; */
   border-radius: 10px;
   background: white;
   opacity: 0.8;
