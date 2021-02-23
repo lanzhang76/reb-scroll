@@ -5,18 +5,23 @@ function initAnimation() {
   gsap.fromTo("#bg-img", { duration: 3, scale: 2.2 }, { scale: 1.3 });
   const branchtl = gsap
     .timeline()
-    .to(".branch", { autoAlpha: 1,duration:0.5,delay:0.2 })
     .fromTo(
       ".branch",
-      {
-        duration: 2,
-        scale: 2,
-        x: 15,
-        y: 5,
-        transformOrigin: "0% 0%",
-        rotation: "-=2"
-      },
+      { scale: 1.3, x: -800,y:10,duration: 2,rotation: "-=12"},
+      { autoAlpha: 1, x:0, y:-20,scale: 1, duration: 2,rotation: 0 }
     )
+  .fromTo([".branch-bud","#branch-apple"],{duration:0.5},{duration:1,aut});
+  // .fromTo(
+  //   ".branch",
+  //   {
+  //     duration: 2,
+  //     scale: 2,
+  //     x: 15,
+  //     y: 5,
+  //     transformOrigin: "0% 0%",
+  //     rotation: "-=2"
+  //   }
+  // )
   //   .to(".branch", { duration: 0.5, y: -1 })
   //   .to(".branch", { duration: 0.5, y: 1 })
   //   .to(".branch", { duration: 0.5, y: 0, ease: "bounce.out" });
@@ -35,20 +40,17 @@ function animate() {
 
   $("body").mousemove(function(e) {
     // console.log(e.pageX,e.pageY);
-//     var xDiff = e.pageX - centerX;
-//     var yDiff = e.pageY - centerY;
-//     var mapped_xDiff = map(xDiff, -800, 800, 1.02, 1);
-
-//     // bg movement
-//     gsap.to(".bg", { scale: mapped_xDiff, transformOrigin: "50% 50%" });
-
-//     //branch
-//     var apple_yDiff = map(yDiff, -800, 800, 3, -3);
-//     // gsap.to(".branch", { y:apple_yDiff});
-
-//     // apple movement
-//     var apple_xDiff = map(xDiff, -600, 600, 1, -2);
-//     var apple_yDiff = map(yDiff, -800, 800, 0.5, -0.5);
+    //     var xDiff = e.pageX - centerX;
+    //     var yDiff = e.pageY - centerY;
+    //     var mapped_xDiff = map(xDiff, -800, 800, 1.02, 1);
+    //     // bg movement
+    //     gsap.to(".bg", { scale: mapped_xDiff, transformOrigin: "50% 50%" });
+    //     //branch
+    //     var apple_yDiff = map(yDiff, -800, 800, 3, -3);
+    //     // gsap.to(".branch", { y:apple_yDiff});
+    //     // apple movement
+    //     var apple_xDiff = map(xDiff, -600, 600, 1, -2);
+    //     var apple_yDiff = map(yDiff, -800, 800, 0.5, -0.5);
     // gsap.to("#branch-apple", { y: apple_xDiff, rotation: apple_yDiff});
   });
 

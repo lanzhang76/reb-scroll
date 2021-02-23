@@ -3,8 +3,8 @@
   box-sizing: border-box;
 }
 
-.hidden{
-  visibility:hidden;
+.hidden {
+  visibility: hidden;
 }
 
 h2 {
@@ -183,7 +183,6 @@ img {
 .content {
   display: flex;
   align-items: center;
-  /*   justify-content: center; */
   margin: 80px 0;
 }
 
@@ -216,8 +215,8 @@ img {
 #branch-apple {
   z-index: -1;
   width: 150px;
-  top: 555px;
-  left: 930px;
+  top: 553px;
+  left: 920px;
 }
 
 #branch-apple img:hover {
@@ -234,4 +233,13 @@ img {
   transition: all 1s ease-out;
   transform: scale(1.01, 1.01);
   transformorigin: 100% 100%;
+}
+
+.animate-wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
