@@ -114,7 +114,7 @@ img {
   width: 600px;
   height: 90px;
   padding: 25px;
-/*   margin: 500px 0px; */
+  margin: 600px 0px 0px 0px;
   border-radius: 10px;
   background: white;
   opacity: 0.8;
@@ -200,18 +200,8 @@ img {
 
 /* CONTENT MIDDLE */
 
-.scroll-wrapper{
-  max-width:1200px;
-  display: flex;
-  justify-content:center;
-/* height: 795px; */
-/*   overflow-y:scroll; */
-  margin: 0 auto;
-}
 .content {
-  position:relative;
   width:100%;
-  margin: 0 auto;
   height: 100%;
   overflow-y: scroll;
   background: grey;
