@@ -203,14 +203,14 @@ img {
 .scroll-wrapper{
   max-width:1200px;
   display: flex;
-  align-items: center;
   justify-content:center;
-height: 795px;
+/* height: 795px; */
 /*   overflow-y:scroll; */
   margin: 0 auto;
 }
 .content {
-  width:1200px;
+  position:relative;
+  width:100%;
   margin: 0 auto;
   height: 100%;
   overflow-y: scroll;
