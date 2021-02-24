@@ -1,9 +1,9 @@
 gsap.to("#modal1", {
   scrollTrigger: {
-    trigger: "#modal2",
+    trigger: "#modal1",
     start: 'top 200px',
     end: 'bottom 10px',
-    // markers: true,
+    markers: true,
     // pinSpacing: false,
     pin: true,
     // scrub: true

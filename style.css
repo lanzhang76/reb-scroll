@@ -50,11 +50,12 @@ img {
 .container-wrapper {
   width: 1200px;
   height: 795px;
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 10;
 }
 
 .main {
@@ -100,7 +101,6 @@ img {
   flex-direction: column;
   z-index: 3;
   /*    */
-  background: beige;
   padding: 30px;
 }
 
@@ -200,10 +200,19 @@ img {
 
 /* CONTENT MIDDLE */
 
+.scroll-wrapper{
+  max-width:1200px;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+height: 795px;
+/*   overflow-y:scroll; */
+  margin: 0 auto;
+}
 .content {
-  width: 100%;
+  width:1200px;
+  margin: 0 auto;
   height: 100%;
-  overflow-x: hidden;
   overflow-y: scroll;
   background: grey;
 }
