@@ -5,10 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Reblozyl Animation</title>
+    <title>Reblozyl Connect Experience Page</title>
 
     <!-- import the webpage's stylesheet -->
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/exp-button.css" />
+    <link rel="stylesheet" href="css/scroll.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Heebo:wght@200;300;400;500;600;700;900&display=swap"
@@ -19,10 +21,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/p5.min.js"></script>
 
-    <script src="/helper.js" defer></script>
-    <script src="/ui.js" defer></script>
-    <script src="/script.js" defer></script>
+    <script src="js/sketch.js"></script>
+    <script src="js/helper.js" defer></script>
+    <script src="js/ui.js" defer></script>
+    <script src="js/scroll.js" defer></script>
+    <script src="js/exp-button.js" defer></script>
   </head>
   <body>
     <div class="container-wrapper">
@@ -31,83 +36,156 @@
           <img
             src="https://cdn.glitch.com/fd522647-712d-4658-9b28-75045dd4f043%2Fheader.png?v=1614113665040"
           />
+          <img id="nav-img" src="assets/experience-nav.png" />
+          <div class="header-button button" id="hcp-button">
+            <span class="modal-button-text">HCP WEBSITE</span>
+            <div class="caret" id="hcp-caret">
+              <img
+                src="https://cdn.glitch.com/1c58e947-ed43-426c-9eb9-d3a01255d866%2FCaret.png?v=1613746038150"
+              />
+            </div>
+            <div class="button-effect button-effect1"></div>
+          </div>
         </div>
         <div class="footer">
           <img
             src="https://cdn.glitch.com/1c58e947-ed43-426c-9eb9-d3a01255d866%2Ffooter.png?v=1613745283662"
           />
         </div>
-        <div class="bg"></div>
-         <div class="content">
+        <h1 id="headline">
+          <span id="headline-second">WELCOME TO</span> <br /><span
+            id="headline-main"
+            >EXPERIENCE REBLOZYL</span
+          >
+        </h1>
+        <div class="bg">
+          <img id="deck-slide" src="frames/frame-1.jpg" />
+        </div>
+
+        <div class="content">
           <div class="modals">
-            <div class="ghost">
-              
-            </div>
-            <div class="model-wrapper" >
-               <div class="modals-section" id="modal1">
-              <div class="button-caption" id="modal1caption">
-                <h3 class="modal-header" style="color:#563189;">
-                  Lorem ipsum CTA 1
-                </h3>
-                <p class="modal-body">
-                  Vestibulum elementum convallis dolor
-                </p>
-              </div>
+            <div class="model-wrapper">
+              <div class="modals-section is-sticky" id="modal1">
+                <div class="button-caption" id="modal1caption">
+                  <h3 class="modal-header" style="color: #563189">eDetails</h3>
+                  <p class="modal-body">
+                    Get immersed in the REBLOZYL story for both anemia in
+                    β-thalassemia and MDS-RS, focusing on efficacy, safety, and
+                    dosing
+                  </p>
+                </div>
 
-              <div class="modals-button-section-wrapper">
-                <div class="modals-button-section" id="modals-button-section1">
-                  <div class="button-label">
-                    <span class="modal-button-text">
-                      MDS-RS
-                    </span>
-                    <div class="caret" id="caret2">
-                      <img
-                        src="https://cdn.glitch.com/1c58e947-ed43-426c-9eb9-d3a01255d866%2FCaret.png?v=1613746038150"
-                      />
+                <div class="modals-button-section-wrapper">
+                  <div
+                    class="modals-button-section modals-button-teal"
+                    id="modals-button-section1A"
+                  >
+                    <div class="button-label">
+                      <span class="modal-button-text"> β-thalassemia </span>
+                      <div class="caret" id="caretA">
+                        <img
+                          src="https://cdn.glitch.com/1c58e947-ed43-426c-9eb9-d3a01255d866%2FCaret.png?v=1613746038150"
+                        />
+                      </div>
+                      <div
+                        class="button-effect button-effect2"
+                        id="effectA"
+                      ></div>
                     </div>
-                    <div class="button-effect button-effect1"></div>
+                  </div>
+                  <div
+                    class="modals-button-section modals-button-magenta"
+                    id="modals-button-section1B"
+                  >
+                    <div class="button-label">
+                      <span class="modal-button-text"> MDS-RS </span>
+                      <div class="caret" id="caretB">
+                        <img
+                          src="https://cdn.glitch.com/1c58e947-ed43-426c-9eb9-d3a01255d866%2FCaret.png?v=1613746038150"
+                        />
+                      </div>
+                      <div
+                        class="button-effect button-effect1"
+                        id="effectB"
+                      ></div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            </div>
-           <div class="model-wrapper" >
-            <div class="modals-section" id="modal2">
-              <div class="button-caption">
-                <h3 class="modal-header" style="color:#563189;">
-                  Lorem ipsum CTA 2
-                </h3>
-                <p class="modal-body">
-                  Vestibulum elementum convallis dolor
-                </p>
-              </div>
+            <div class="model-wrapper">
+              <div class="modals-section" id="modal2">
+                <div class="button-caption">
+                  <h3 class="modal-header" style="color: #563189">
+                    Case Studies
+                  </h3>
+                  <p class="modal-body">
+                    Discover in-depth profiles of patients during different
+                    phases of REBLOZYL treatment
+                  </p>
+                </div>
 
-              <div class="modals-button-section-wrapper">
-                <div class="modals-button-section" id="modals-button-section1">
-                  <div class="button-label">
-                    <span class="modal-button-text">
-                      MDS-RS
-                    </span>
-                    <div class="caret" id="caret2">
-                      <img
-                        src="https://cdn.glitch.com/1c58e947-ed43-426c-9eb9-d3a01255d866%2FCaret.png?v=1613746038150"
-                      />
+                <div class="modals-button-section-wrapper">
+                  <div
+                    class="modals-button-section modals-button-purple"
+                    id="modals-button-section2"
+                  >
+                    <div class="button-label">
+                      <span class="modal-button-text">LEARN MORE</span>
+                      <div class="caret" id="caret2">
+                        <img
+                          src="https://cdn.glitch.com/1c58e947-ed43-426c-9eb9-d3a01255d866%2FCaret.png?v=1613746038150"
+                        />
+                      </div>
+                      <div
+                        class="button-effect button-effect3"
+                        id="effect2"
+                      ></div>
                     </div>
-                    <div class="button-effect button-effect1"></div>
                   </div>
                 </div>
               </div>
             </div>
+            <div class="model-wrapper">
+              <div class="modals-section" id="modal3">
+                <div class="button-caption">
+                  <h3 class="modal-header" style="color: #563189">MOA Video</h3>
+                  <p class="modal-body">
+                    See the latest REBLOZYL video featuring the mechanism of
+                    disease and how REBLOZYL can help
+                  </p>
+                </div>
+
+                <div class="modals-button-section-wrapper">
+                  <div
+                    class="modals-button-section modals-button-purple"
+                    id="modals-button-section3"
+                  >
+                    <div class="button-label">
+                      <span class="modal-button-text">WATCH NOW</span>
+                      <div class="caret" id="caret3">
+                        <img
+                          src="https://cdn.glitch.com/1c58e947-ed43-426c-9eb9-d3a01255d866%2FCaret.png?v=1613746038150"
+                        />
+                      </div>
+                      <div
+                        class="button-effect button-effect3"
+                        id="effect3"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+
+        <div class="box">
+          <span></span>
+          <span></span>
+        </div>
       </div>
     </div>
-    
-<!--     <div class="scroll-wrapper">
-     
-    </div> -->
-    
 
     <script src="https://button.glitch.me/button.js" defer></script>
   </body>

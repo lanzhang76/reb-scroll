@@ -1,0 +1,33 @@
+.box {
+  position: absolute;
+  margin-left: 49.5%;
+  bottom: 190px;
+}
+
+.box span {
+  width: 18px;
+  height: 18px;
+  display: block;
+  border-right: 2px solid #e1d6f1;
+  border-bottom: 2px solid #e1d6f1;
+  transform: rotate(45deg);
+  margin: -10px;
+  animation: animate 2s infinite;
+}
+
+.box span:nth-child(2) {
+  animation-delay: -0.1s;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  100% {
+    opacity: 0;
+  }
+}

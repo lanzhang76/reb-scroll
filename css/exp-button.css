@@ -1,0 +1,92 @@
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  height: 30px;
+  color: white;
+}
+
+.exp-button {
+  position: absolute;
+  border-radius: 20px;
+  height: 30px;
+  color: white;
+  right: 20px;
+  top: 72px;
+  width: 204px;
+  padding: 4px;
+  background: linear-gradient(#8f5fbe, #563189);
+}
+
+.caret {
+  margin-left: 10px;
+  width: 8px;
+}
+
+.exp-button-inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  box-shadow: 0 0px 20px rgba(0, 0, 255, 0.3);
+}
+
+.exp-button-comps {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.exp-button-effect {
+  opacity: 0;
+  position: absolute;
+  border-radius: 30px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: linear-gradient(
+      217deg,
+      rgba(255, 0, 212, 0.8),
+      rgba(255, 0, 0, 0) 70.71%
+    ),
+    linear-gradient(127deg, rgba(0, 162, 255, 0.8), rgba(0, 255, 0, 0) 70.71%),
+    linear-gradient(336deg, rgba(76, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
+  box-shadow: 0 10px 17px #d8bbf5;
+}
+
+.exp-button-comps {
+  position: absolute;
+  top: 0;
+}
+
+.exp-button-el {
+  position: absolute;
+  opacity: 0;
+}
+
+#exp-leaf-1 {
+  width: 34px;
+  left: 20px;
+  bottom: -22px;
+}
+
+#exp-leaf-2 {
+  width: 30px;
+  right: 20px;
+  top: -10px;
+}
+
+#exp-flower-1 {
+  width: 35px;
+  left: -20px;
+  top: -20px;
+}
+
+#exp-flower-2 {
+  width: 27px;
+  right: -6px;
+  bottom: -20px;
+}

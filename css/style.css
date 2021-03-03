@@ -33,17 +33,23 @@ img {
   font-weight: 600;
 }
 
+.caret {
+  margin-left: 10px;
+  width: 8px;
+  z-index: 20;
+}
+
 .modal-header {
   font-size: 18px;
 }
 
 .modal-body {
-  font-weight: 600;
+  font-weight: 400;
   font-size: 14px;
 }
 
 .modal-button-text {
-  font-weight: 400;
+  font-weight: 600;
   font-size: 13px;
 }
 
@@ -56,12 +62,13 @@ img {
   transform: translate(-50%, -50%);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   z-index: 10;
+  overflow: hidden;
 }
 
 .main {
   position: relative;
-  width:100%;
-  height:100%;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
   box-sizing: border-box;
 }
@@ -73,6 +80,7 @@ img {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  /* display: flex; */
 }
 
 .header {
@@ -84,9 +92,30 @@ img {
   z-index: 10;
 }
 
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  height: 30px;
+  color: white;
+}
+
+.header-button {
+  position: absolute;
+  right: 20px;
+  top: 72px;
+  width: 184px;
+  background: #169ab4;
+}
+
+.header-button:hover {
+  box-shadow: 0px 4px 10px #31cadb;
+}
+
 .footer {
   position: fixed;
-  z-index: 20;
+  z-index: 1000;
   width: 100%;
   bottom: 0;
 }
@@ -100,22 +129,27 @@ img {
   display: flex;
   flex-direction: column;
   z-index: 3;
-  /*    */
+  height: auto;
   padding: 30px;
-  margin-bottom:1000px;
+
+  overflow-y: scroll;
+  /* margin-top: 550px; */
+  margin-top: 700px;
+  margin-bottom: 300px;
 }
 
-.model-wrapper{
-  height:900px;
-  display:flex;
-  align-items:center;
+.model-wrapper {
+  height: 300px;
+  /* border: 1px solid red; */
+  display: flex;
+  align-items: flex-end;
 }
 
 .modals-section {
   width: 600px;
-  height: 90px;
-  padding: 25px;
-  margin: 600px 0px 0px 0px;
+  padding: 22px;
+  margin: 0 50px;
+  /* margin: 100px 0px 0px 50px; */
   border-radius: 10px;
   background: white;
   opacity: 0.8;
@@ -130,6 +164,7 @@ img {
 
 .modals-button-section-wrapper {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -137,6 +172,7 @@ img {
 .modals-button-section {
   width: 185px;
   height: 32px;
+  margin: 6px;
   border-radius: 25px;
   color: white;
   overflow: hidden;
@@ -154,11 +190,12 @@ img {
 }
 
 .button-caption {
+  width: 325px;
   line-height: 1.1em;
 }
 
 .modals-button-section .modal-button-text {
-  z-index: 20;
+  z-index: 10;
 }
 
 .modals-button-section .caret {
@@ -171,11 +208,32 @@ img {
   width: 100%;
 }
 
-#modals-button-section1 {
-  background: linear-gradient(#8F5FBE, #563189);
+.modals-button-purple {
+  background: linear-gradient(#8f5fbe, #563189);
 }
-#modals-button-section1:hover {
-  box-shadow: 0px 4px 10px #8F5FBE;
+.modals-button-purple:hover {
+  box-shadow: 0px 4px 10px #8f5fbe;
+}
+
+.modals-button-teal {
+  background: linear-gradient(#31cadb, #169ab4);
+}
+.modals-button-teal:hover {
+  box-shadow: 0px 4px 10px #31cadb;
+}
+
+.modals-button-magenta {
+  background: linear-gradient(#eb36c0, #d3198c);
+}
+.modals-button-magenta:hover {
+  box-shadow: 0px 4px 10px #eb36c0;
+}
+
+#modals-button-nav {
+  background: #169ab4;
+}
+#modals-button-nav:hover {
+  box-shadow: 0px 4px 10px #169ab4;
 }
 
 .button-effect {
@@ -188,18 +246,16 @@ img {
 }
 
 .button-effect1 {
-  background: #8F5FBE;
+  background: #eb36c0;
 }
 
 #button-effect2 {
-  background: #31CADB;
+  background: #31cadb;
 }
 
 #button-effect3 {
-  background: #8F5FBE;
+  background: #8f5fbe;
 }
-
-
 
 /* SCROLL BAR */
 /* width */
@@ -208,26 +264,55 @@ img {
 }
 
 ::-webkit-scrollbar-track {
-  background: transparent; 
+  background: transparent;
 }
- 
+
 ::-webkit-scrollbar-thumb {
-  background: transparent; 
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: transparent; 
+  background: transparent;
 }
 
 /* CONTENT MIDDLE */
 
 .content {
-  width:100%;
+  width: 100%;
   height: 100%;
+  /* padding-bottom: 150px; */
   overflow-y: scroll;
-  background: grey;
 }
 
-.ghost{
-  position:absolute;
+.scroll-wrapper {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+#headline {
+  position: fixed;
+  margin: 0 auto;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 35px;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#headline-main {
+  font-size: 40px;
+}
+
+#headline-second {
+  font-size: 30px;
+}
+
+#nav-img {
+  position: absolute;
+  width: 570px;
+  height: auto;
+  left: 230px;
+  top: 68px;
 }
